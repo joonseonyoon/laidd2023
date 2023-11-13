@@ -38,7 +38,7 @@ plt.legend()
 
 
 from sklearn.metrics import mean_squared_error
-print(f"Mean Squared Error of this model is {mean_squared_error(y_test, y_pred2):.3f} (pIC50 unit)")
+print(f"Mean Squared Error of this model is {mean_squared_error(y_test, y_pred2):.3f}")
 
 import numpy as np
 print(f"Pearson's correlation coefficient of our model is {np.corrcoef(y_test,y_pred2)[0,1]:.3f}")
