@@ -1,8 +1,8 @@
 # laidd2023
 
-#install \n
-numpy \n
-pandas \n
+#install
+numpy
+pandas
 matplotlib
 rdkit
 scikit-learn
