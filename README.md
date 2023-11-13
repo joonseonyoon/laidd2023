@@ -1,12 +1,21 @@
-# laidd2023
+## laidd2023
+----
 
-#install
-numpy
-pandas
-matplotlib
-rdkit
-scikit-learn
-pytorch
-pytorch-geometric
+## Requirements
+- torch
+- rdkit
+- pandas
+- numpy
+- matplotlib
+- scikit-learn
+- pytorch
+- pytorch-geometric
+
+----
+
+## Overview
+
+This repository provides training methods for docked molecules and docking score. With the trained model, one can virtually screen the chemical compounds with the high binding affinity. 
+Prior to train the model, one have to dock 0.5M compounds to the target protein structure to collect the docking score. Please refer to Autodock for docking practice. 
 
 
