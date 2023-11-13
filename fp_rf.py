@@ -39,7 +39,7 @@ plt.plot(range(-10, 0), range(-10, 0), "r--", label = "y=x")
 plt.legend()
 
 
-print(f"Mean Squared Error of this model is {mean_squared_error(y_test, y_pred2):.3f} (pIC50 unit)")
+print(f"Mean Squared Error of this model is {mean_squared_error(y_test, y_pred2):.3f}")
 print(f"Pearson's correlation coefficient of our model is {np.corrcoef(y_test,y_pred2)[0,1]:.3f}")
 
 with open('rfregressor_pocket2.pkl', 'wb') as file:
