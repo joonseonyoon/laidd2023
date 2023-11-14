@@ -42,7 +42,7 @@ class DockingDataset(data.Dataset):
     def __init__(self):
 
         super().__init__()
-        self.raw_df=pd.read_excel('/content/drive/MyDrive/Company/laidd/pocket_2_binding_affinity.xlsx')
+        self.raw_df=pd.read_excel('/content/drive/MyDrive/laidd/pocket_2_binding_affinity.xlsx')
         self.df_sub=self.raw_df[["SMILES_CODE", "BINDING_AFFINITY"]].copy() #SMILES_CODE, BINDING_AFFINITY 열만 추출
         self.df_sub=self.df_sub.dropna(axis='index', subset='BINDING_AFFINITY') # BINDING_AFFINITY column에 NaN이 있는 raw를 제거
 
@@ -174,7 +174,6 @@ for data_inputs, data_labels in test_loader:
 
     docking_values.append(data_labels.squeeze(dim=-1))
     pred_values.append(model(data_inputs).squeeze(dim=1))
-    #preds1 = preds.squeeze(dim=1)
 
 docking_values = [value.tolist() for value in docking_values]
 pred_values = [value.tolist()[0] for value in pred_values]
