@@ -22,7 +22,7 @@ import os
 
 torch.manual_seed(820823)
 
-pocket2 = pd.read_excel('C:/Users/USER/Desktop/laidd/Pocket_2_binding_affinity.xlsx')
+pocket2 = pd.read_excel('C:/Users/USER/Desktop/laidd/Pocket_2_binding_affinity.xlsx') #SMILES와 도킹 스코어로 구성된 데이터 로드
 
 def check_atoms(mol):
   """
@@ -413,8 +413,9 @@ for epoch in range(1, n_epoch):
 
 
 test_acc, out_all, true_all = test(test_loader)
-print(f"Test set RMSE: {test_acc:.4f} (pIC50)")
+print(f"Test set RMSE: {test_acc:.4f}")
 
+#plotting to investigate the correlation of docking and predicted scores
 import matplotlib.pyplot as plt
 
 experimental = [x for x in true_all]
@@ -423,7 +424,7 @@ prediction = [x for x in out_all]
 plt.figure(figsize=(8, 8))
 plt.scatter(experimental, prediction, marker = '.')
 plt.plot(range(-12, 0), range(-12, 0), 'r--')
-plt.xlabel("Experimental pIC50", fontsize='xx-large')
-plt.ylabel("Predicted pIC50", fontsize='xx-large')
+plt.xlabel("docking score", fontsize='xx-large')
+plt.ylabel("predicted score", fontsize='xx-large')
 plt.xlim(-12, 0)
 plt.ylim(-12, 0)
