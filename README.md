@@ -2,7 +2,6 @@
 ----
 
 ## Requirements
-- torch
 - rdkit
 - pandas
 - numpy
