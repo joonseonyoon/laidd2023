@@ -33,7 +33,7 @@ plt.scatter(y_test, y_pred2)
 plt.xlabel("Calculated binding affinity")
 plt.ylabel("Predicted binding affinity")
 plt.grid()
-plt.plot(range(-10, 0), range(-10, 0), "r--", label = "y=x")
+plt.plot(range(-12, 0), range(-12, 0), "r--", label = "y=x")
 plt.legend()
 
 
